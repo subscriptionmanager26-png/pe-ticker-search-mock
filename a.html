@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Mock A — Anchored dropdown · PocketEdge</title>
+    <link rel="stylesheet" href="./shared.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="nav">
+        <div class="nav-inner">
+          <div class="brand">
+            <img src="./logo.png" alt="" width="28" height="28" />
+            <span class="brand-name">PocketEdge</span>
+          </div>
+          <span class="nav-badge">Mock A</span>
+        </div>
+      </header>
+
+      <div class="main" id="scrollRoot">
+        <div class="main-inner">
+          <a class="back" href="./index.html">← All mocks</a>
+          <h1 class="page-title">Add holdings</h1>
+          <p class="page-lede">
+            Type in a ticker field — results stay under the input (anchored dropdown).
+          </p>
+
+          <section class="total-card">
+            <p class="section-label">Total invested</p>
+            <p class="total-value" id="totalValue">₹0</p>
+            <p class="total-hint" id="totalHint">Add holdings below</p>
+          </section>
+
+          <div class="holdings-head">
+            <p class="section-label">Holdings</p>
+            <div class="cost-toggle" role="group" aria-label="Cost input mode">
+              <button type="button" class="active" data-cost="invested">Total invested</button>
+              <button type="button" data-cost="avg">Avg price</button>
+            </div>
+          </div>
+
+          <div class="col-head">
+            <span>Ticker</span>
+            <span class="right" id="costHead">Total invested</span>
+            <span class="right">Qty</span>
+            <span></span>
+          </div>
+
+          <div class="rows" id="rows"></div>
+          <button type="button" class="add-row" id="addRow">+ Add holding</button>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <button type="button" class="primary-btn">Continue</button>
+        </div>
+      </footer>
+    </div>
+
+    <div id="dropdownRoot"></div>
+    <script src="./shared.js"></script>
+    <script src="./mock-a.js"></script>
+  </body>
+</html>

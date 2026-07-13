@@ -5,53 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#ffffff" />
-    <title>PocketEdge — Ticker search mock B</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
+    <title>PocketEdge — Ticker search mocks</title>
+    <link rel="stylesheet" href="./shared.css" />
   </head>
   <body>
-    <div class="phone">
-      <header class="topbar">
-        <div class="topbar-mark">PocketEdge</div>
-        <div class="topbar-badge">Mock B</div>
-      </header>
-      <main class="screen" id="screen">
-        <p class="eyebrow">Portfolio setup</p>
-        <h1 class="title">Add holdings</h1>
-        <p class="lede">Tap a ticker field. The search should lift to the top — not pop a modal.</p>
-        <section class="total-card">
-          <p class="total-label">Total invested</p>
-          <p class="total-value">₹2,40,000</p>
-          <p class="total-hint">2 holdings · match this with your broker app</p>
-        </section>
-        <div class="table-head">
-          <span>Ticker</span>
-          <span class="right">Invested</span>
-          <span class="right">Qty</span>
-        </div>
-        <div class="rows" id="rows"></div>
-        <button type="button" class="add-row" id="addRow">+ Add holding</button>
-      </main>
-      <div class="search-layer" id="searchLayer" aria-hidden="true">
-        <div class="search-backdrop" id="searchBackdrop"></div>
-        <div class="search-sheet" id="searchSheet">
-          <div class="search-chrome">
-            <button type="button" class="cancel" id="searchCancel">Cancel</button>
-            <div class="search-field-wrap" id="searchFieldWrap">
-              <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
-                <path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              </svg>
-              <input id="searchInput" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" placeholder="Search stock, ETF, or fund" />
-            </div>
+    <div class="app">
+      <header class="nav">
+        <div class="nav-inner">
+          <div class="brand">
+            <img src="./logo.png" alt="" width="28" height="28" />
+            <span class="brand-name">PocketEdge</span>
           </div>
-          <div class="results" id="results"></div>
+          <span class="nav-badge">Mocks</span>
+        </div>
+      </header>
+
+      <div class="main">
+        <div class="main-inner">
+          <h1 class="page-title">Ticker search</h1>
+          <p class="page-lede">
+            Two iPhone Safari approaches for holdings ticker search. Same PocketEdge UI —
+            pick one and test on your phone.
+          </p>
+
+          <div class="chooser">
+            <a class="chooser-card" href="./a.html">
+              <p class="chooser-kicker">Mock A</p>
+              <p class="chooser-title">Anchored dropdown</p>
+              <p class="chooser-body">
+                16px inputs (no Safari zoom) + fixed menu under the field, repositioned with
+                visualViewport when the keyboard opens.
+              </p>
+            </a>
+
+            <a class="chooser-card" href="./b.html">
+              <p class="chooser-kicker">Mock B</p>
+              <p class="chooser-title">Expand to top</p>
+              <p class="chooser-body">
+                Tapping the ticker field morphs into a full search sheet at the top — results
+                below. Feels like the page reorganized, not a popup.
+              </p>
+            </a>
+          </div>
+
+          <p class="note">
+            Both screens mirror the onboarding / portfolio holdings editor (total invested card,
+            cost toggle, ticker · invested · qty row). Try searching
+            <strong>REL</strong>, <strong>INFY</strong>, <strong>flexi</strong>, or
+            <strong>gold</strong>.
+          </p>
         </div>
       </div>
     </div>
-    <p class="desktop-hint">Open this URL on your iPhone. This is Mock B — expand-to-top search.</p>
-    <script src="./app.js"></script>
   </body>
 </html>
